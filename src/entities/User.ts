@@ -11,7 +11,7 @@ export class User {
     this.props = props;
   }
 
-  get name () {
+   get name () {
     return this.props.name;
   }
 
@@ -22,4 +22,14 @@ export class User {
   get passoword () {
     return this.props.passoword;
   }
+
+  static factoryUser(name: string, email: string, passoword: string): User {
+    const props : UserProps = {
+      name,
+      email,
+      passoword
+    };
+    return new User(props);
+  }
+  
 }

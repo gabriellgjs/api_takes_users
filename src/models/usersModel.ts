@@ -46,5 +46,5 @@ export const createNewUser = async(user: User) =>{
     await insert.save();
     return;
   }
-  throw new Error('deu b.o');
+  return new Error('deu b.o');
   };
