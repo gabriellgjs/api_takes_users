@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import usersRouters from './routes/usersRouter';
 
 dotenv.config();
+
 const server = express();
 
 server.use(express.static(path.join(__dirname, '../public')));

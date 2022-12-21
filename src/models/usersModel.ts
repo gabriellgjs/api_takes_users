@@ -47,4 +47,13 @@ export const createNewUser = async(user: User) =>{
     return;
   }
   return new Error('deu b.o');
-  };
+};
+
+export const editUser = async(user : UserInstace, userObj : User) => {
+    user.name = userObj.name;
+    user.email = userObj.email;
+    user.passoword = userObj.passoword;
+    await user.save();
+};
+
+export const delUser = async(user : UserInstace) => await user.destroy();
